@@ -1,3 +1,4 @@
+// logica de interfaz web de pedidos
 const ordersContainer = document.getElementById("ordersContainer");
 const orderForm = document.getElementById("orderForm");
 const searchInput = document.getElementById("searchInput");
