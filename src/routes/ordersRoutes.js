@@ -1,3 +1,4 @@
+// rutas de la api de pedidos
 const {
     getAllOrders,
     createOrder,
@@ -43,7 +44,7 @@ async function handleOrdersApi(req, res, pathname) {
             const created = createOrder(body);
             return sendJson(res, 201, created);
         } catch {
-            return sendJson(res, 400, { error: "JSON inv·lido" });
+            return sendJson(res, 400, { error: "JSON inv√°lido" });
         }
     }
 
@@ -58,7 +59,7 @@ async function handleOrdersApi(req, res, pathname) {
                 if (!updated) return sendJson(res, 404, { error: "Pedido no encontrado" });
                 return sendJson(res, 200, updated);
             } catch {
-                return sendJson(res, 400, { error: "JSON inv·lido" });
+                return sendJson(res, 400, { error: "JSON inv√°lido" });
             }
         }
 
