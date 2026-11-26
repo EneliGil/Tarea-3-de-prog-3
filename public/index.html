@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Caf&eacute; &amp; Dulce Atelier &mdash; Gesti&oacute;n de Pedidos</title>
+    <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Caf&eacute; &amp; Dulce Atelier</h1>
+            <p>Sistema de gesti&oacute;n de pedidos de cafeter&iacute;a y reposter&iacute;a</p>
+        </header>
+
+        <div class="grid">
+            <section class="card">
+                <h2>Nuevo pedido</h2>
+                <form id="orderForm">
+                    <div class="field">
+                        <label for="customer">Cliente</label>
+                        <input id="customer" name="customer" placeholder="Ej. Camila Pe&ntilde;a" required />
+                    </div>
+                    <div class="field">
+                        <label for="product">Producto de cafeter&iacute;a / reposter&iacute;a</label>
+                        <input id="product" name="product" placeholder="Ej. Brownie de nuez y cold brew" required />
+                    </div>
+                    <div class="row-2">
+                        <div class="field">
+                            <label for="quantity">Cantidad</label>
+                            <input id="quantity" name="quantity" type="number" min="1" value="1" required />
+                        </div>
+                        <div class="field">
+                            <label for="price">Total (RD$)</label>
+                            <input id="price" name="price" type="number" min="0" step="10" value="350" required />
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label for="status">Estado inicial</label>
+                        <select id="status" name="status">
+                            <option value="Pendiente">Pendiente</option>
+                            <option value="En preparaci&oacute;n">En preparaci&oacute;n</option>
+                            <option value="Listo">Listo</option>
+                        </select>
+                    </div>
+                    <div class="field">
+                        <label for="notes">Notas del pedido</label>
+                        <textarea id="notes" name="notes" rows="2" placeholder="Ej. Sin hielo, dedicatoria en caja..."></textarea>
+                    </div>
+                    <button class="btn-primary" type="submit">Agregar pedido</button>
+                </form>
+            </section>
+
+            <section class="card">
+                <h2>Pedidos activos</h2>
+                <div class="toolbar">
+                    <input id="searchInput" type="text" placeholder="Buscar por cliente o producto..." />
+                    <select id="statusFilter">
+                        <option value="ALL">Todos los estados</option>
+                        <option value="Pendiente">Pendiente</option>
+                        <option value="En preparaci&oacute;n">En preparaci&oacute;n</option>
+                        <option value="Listo">Listo</option>
+                    </select>
+                </div>
+                <div id="ordersContainer" class="order-list"></div>
+            </section>
+        </div>
+    </div>
+
+    <script src="/app.js"></script>
+</body>
+</html>

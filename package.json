@@ -1,0 +1,17 @@
+{
+	"name": "cafe-dulce-atelier",
+	"version": "1.1.0",
+	"description": "Sistema web CRUD de gestion de pedidos para cafeteria y reposteria",
+	"main": "src/server.js",
+	"scripts": {
+		"start": "node src/server.js"
+	},
+	"keywords": [
+		"cafeteria",
+		"reposteria",
+		"pedidos",
+		"crud",
+		"git-flow"
+	],
+	"license": "MIT"
+}
