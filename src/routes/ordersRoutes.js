@@ -1,3 +1,4 @@
+// rutas de la api de pedidos
 const {
     getAllOrders,
     createOrder,
@@ -73,4 +74,3 @@ async function handleOrdersApi(req, res, pathname) {
 }
 
 module.exports = { handleOrdersApi, sendJson };
-// rutas de la api de pedidos
