@@ -1,3 +1,4 @@
+// modulo de almacenamiento de pedidos
 let orders = [
     {
         id: 1,
@@ -80,8 +81,3 @@ module.exports = {
     updateOrder,
     deleteOrder
 };
- feature/orders-store
-// modulo de pedidos
-=======
-// modulo de almacenamiento de pedidos
- main
